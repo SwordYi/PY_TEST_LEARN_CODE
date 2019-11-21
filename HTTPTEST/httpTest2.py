@@ -1,0 +1,7 @@
+import requests
+test_url = "http://music.163.com/weapi/cloudsearch/get/web?csrf_token="
+form = {"params":"HgGT+DDK+3OGsmWIkmUzxe7qsOW7uvh9HVUbfnBEUXzMdNzs7NFosUC0haXaCJvGv8KCb7DwZcAqhxzyPalsLG1oNlEZLmW5Fei+ScBK8tRWSN5t+7ag0/HiDy3p+tM+t11c0s4twhz1gio5B+zHl0mGNJ7tsTRx1riIzH6osvZod2Ilyo/kbdch553GEeK9Ge1xEecMK7gcg02WH9j2xb5gHgXkeSpjzCmoBCGibv42QvetaMZwFOU/GZ7lhLJbg8rYNLN85KcreCQJWiJhBuUfV/fbnq5KnlyPC4pl67g=","encSecKey":"30932d3c8f67c2b30c31a9a760baea2d91a9fe678021e610a0cc31c2ba9276f933bd4ffc7d7f492db35c8e4b8f5bbfc913a48749139d68a04734ffb06362550ca4a66767de8aab52bae081469c4b65d3e2935b683ed9c49ef6493943ec7c292a3777584b9f2ee009bbf5720a655f26e7a06d1be315e26205d80950ca872cc511"}
+response = requests.post(test_url, data = form)
+print(response.status_code)
+print(response.headers)
+print(response.text)
